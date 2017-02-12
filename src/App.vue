@@ -1,12 +1,13 @@
 <template>
   <div class="app">
-    <elm :src="ElmButton"></elm>
+    <elm :src="Box" :ports="reverse"></elm>
   </div>
 </template>
 
 <script>
-import ElmButton from './elm/Button.elm'
+import Box from './elm/Box.elm'
 import Elm from './components/Elm'
+import reverse from './service/reverse'
 
 export default {
   name: 'App',
@@ -15,8 +16,11 @@ export default {
   },
   data () {
     return {
-      ElmButton: ElmButton
+      Box: Box
     }
+  },
+  methods: {
+    reverse
   }
 }
 </script>

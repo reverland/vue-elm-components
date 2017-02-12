@@ -14,7 +14,7 @@ export default {
       type: Object
     },
     ports: {
-      type: Object
+      type: Function
     }
   },
   mounted: function () {
